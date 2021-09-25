@@ -1,0 +1,39 @@
+###
+POST http://localhost:3000/api/documentation/611fde772d9946950d12ef05/comments
+Content-Type: application/json
+
+{
+  "newComment": {
+    "content": "I want my pain...to be inflicted on others....I want no one to escape..."
+  },
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+###
+PUT http://localhost:3000/api/documentation/611fde772d9946950d12ef05/comments
+Content-Type: application/json
+
+{
+  "update": {
+    "content": "Never surrender"
+  },
+  "commentId": "6123c036f8a0aad48d62c5c8",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+###
+DELETE http://localhost:3000/api/documentation/611fde772d9946950d12ef05/comments
+Content-Type: application/json
+
+{
+  "commentId": "6124de036ee82ba5a5b1080b",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+###
+GET http://localhost:3000/api/documentation/611fde772d9946950d12ef05/comments
+Content-Type: application/json
+
+{
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}

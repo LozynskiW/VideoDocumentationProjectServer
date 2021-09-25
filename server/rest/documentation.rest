@@ -1,0 +1,57 @@
+### REQUIRED TO TEST ANY ENDPOINT
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "password": "fearTheOldBlood",
+  "email": "pallad@theOldBlood.yh"
+}
+
+###
+POST http://localhost:3000/api/documentation/newDocumentation
+Content-Type: application/json
+
+{
+  "documentation": {
+    "name": "Rest test of documentation"
+  },
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+###
+POST http://localhost:3000/api/documentation/611fde772d9946950d12ef05/addDocument
+Content-Type: application/json
+
+{
+  "newDocument": {
+    "name": "Rest test",
+    "file": "https://www.youtube.com/watch?v=CyDYg0rZk7M"
+  },
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+###
+GET http://localhost:3000/api/documentation/611fde772d9946950d12ef05/documents
+Content-Type: application/json
+
+{
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+###
+PUT http://localhost:3000/api//documentation/611fde772d9946950d12ef05/update
+Content-Type: application/json
+
+{
+  "documentToUpdateId": "611fe2e76e0c53aa2107095e",
+  "newDocumentId": "611fe33e05e4cda6a9b20509",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+###
+GET http://localhost:3000/api//documentation/611fde772d9946950d12ef05
+Content-Type: application/json
+
+{
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}

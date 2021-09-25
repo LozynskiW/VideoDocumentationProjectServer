@@ -1,0 +1,72 @@
+### Adding project
+POST http://localhost:3000/api/project
+Content-Type: application/json
+
+{
+  "newProject": {
+    "name": "Rest test of project",
+    "description": "In this scenario we are removing a project and then finding all the assignments which belongs to this project and removing its reference from them"
+  },
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+### Granting acces to project for user
+PUT http://localhost:3000/api/project/6137da108ff1d14d98e0598b/addUser
+Content-Type: application/json
+
+{
+  "userId": "613e2eceb9fb2744d0031672",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTNlMmVjZWI5ZmIyNzQ0ZDAwMzE2NzIiLCJpYXQiOjE2MzE1NTEwNzJ9.xZOktTQjRkSLzxf_cGDAcGmj4Y4drLI3dbLRe_TWWto"
+}
+
+### Denying acces to project for user
+PUT http://localhost:3000/api/project/61267def999a4f212e83ba2e/deleteUser
+Content-Type: application/json
+
+{
+  "userId": "61267ef0c1bda5219aeae4c1",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+### Adding documentation to project
+PUT http://localhost:3000/api/project/61267def999a4f212e83ba2e/addDocumentation
+Content-Type: application/json
+
+{
+  "documentationToAddId": "611fde772d9946950d12ef05",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+### Deleting documentation from project
+PUT http://localhost:3000/api/project/61267def999a4f212e83ba2e/pullDocumentation
+Content-Type: application/json
+
+{
+  "documentationToPullId": "611fde772d9946950d12ef05",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjMzFiZDhmNDJmNTBhNDVkODQxYjkiLCJpYXQiOjE2Mjk0NzA4NjV9.-HPeipP7jTl4a4lc89jCMscuOQxR8YthgZ_9UrwJeUc"
+}
+
+### Getting projects for user that is owner
+GET http://localhost:3000/api/user/projects
+Content-Type: application/json
+
+{
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI2N2VmMGMxYmRhNTIxOWFlYWU0YzEiLCJpYXQiOjE2Mjk5MzQ1MDF9.CvUXDMbd2SE5NB4_lymszsB6omLmzyzqc2mqp-L7ajI"
+}
+
+### Getting projects for user that is not owner, has access
+GET http://localhost:3000/api/user/projects
+Content-Type: application/json
+
+{
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI2N2VmMGMxYmRhNTIxOWFlYWU0YzEiLCJpYXQiOjE2Mjk5MzQ1MDF9.CvUXDMbd2SE5NB4_lymszsB6omLmzyzqc2mqp-L7ajI"
+}
+
+### Making project public/private
+PUT http://localhost:3000/api/project/61267def999a4f212e83ba2e
+Content-Type: application/json
+
+{
+  "isPublic": "false",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI2N2VmMGMxYmRhNTIxOWFlYWU0YzEiLCJpYXQiOjE2Mjk5MzQ1MDF9.CvUXDMbd2SE5NB4_lymszsB6omLmzyzqc2mqp-L7ajI"
+}

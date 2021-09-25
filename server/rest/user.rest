@@ -1,0 +1,89 @@
+### Register
+
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+  "newUser": {
+    "firstName": "Project",
+    "lastName": "Tester",
+    "password": "12346",
+    "email": "project@tester.com"
+  }
+}
+
+### Login
+
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "password": "12346",
+    "email": "project@tester.com"
+}
+### "password": "fearTheOldBlood", gherman
+### "password": "12346", tester
+###
+
+GET http://localhost:3000/api/user/test/all
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/user/find/email
+Content-Type: application/json
+
+{
+  "email": "pallad@theOldBlood.yh"
+}
+
+###
+
+GET http://localhost:3000/api/user/find/name
+Content-Type: application/json
+
+{
+"name": "Gherman"
+}
+
+###
+
+GET http://localhost:3000/api/user/find/name
+Content-Type: application/json
+
+{
+  "name": "Gherman"
+}
+
+###
+
+PUT http://localhost:3000/api/user/update
+Content-Type: application/json
+
+{
+  "userId":"611c31bd8f42f50a45d841b9",
+  "update": {
+    "firstName": "Pallad"
+  }
+}
+
+### Accepting project by user
+
+PUT http://localhost:3000/api/user/project/6137da108ff1d14d98e0598b
+Content-Type: application/json
+
+{
+  "userId":"61267ef0c1bda5219aeae4c1",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI2N2VmMGMxYmRhNTIxOWFlYWU0YzEiLCJpYXQiOjE2MzEwNTAzODJ9.QwOKQkyeSnn_JdfhPietGHfGsbtFdlkzrR6DVBpcdQE",
+  "isAccepted": "false"
+}
+
+### Granting acces to project for user
+
+PUT http://localhost:3000/api/project/6137da108ff1d14d98e0598b/addUser
+Content-Type: application/json
+
+{
+  "userId": "61267ef0c1bda5219aeae4c1",
+  "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI2N2VmMGMxYmRhNTIxOWFlYWU0YzEiLCJpYXQiOjE2MzEwNTAzODJ9.QwOKQkyeSnn_JdfhPietGHfGsbtFdlkzrR6DVBpcdQE"
+}

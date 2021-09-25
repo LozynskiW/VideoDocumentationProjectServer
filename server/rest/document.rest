@@ -1,0 +1,10 @@
+###
+POST http://localhost:3000/api/document
+Content-Type: application/json
+
+{
+  "newDocument": {
+    "name": "Rest test",
+    "file": "https://www.youtube.com/watch?v=CyDYg0rZk7M"
+  }
+}
